@@ -8,23 +8,20 @@ export async function POST(req: Request) {
         const { name,email } = await req.json();
 
         const data = await resend.emails.send({
-            from: "Call4ly <team@call4ly.com>", // skal være dit domæne, der er godkendt
+            from: "Call4ly <support@mail.call4ly.com>", // din ønskede adresse
             to: email,
-            subject: "Thank you for signing up for Call4ly 🚀",
+            subject: "Welcome to Call4ly", // neutral subject (anti-spam)
             html: `
-        <div style="font-family: sans-serif; padding: 20px;">
-          <h2>Thank you for joining the Call4ly waitlist!</h2>
-          <p>Hi ${name},</p>
-          <p>We're excited to show you how Call4ly can help businesses with AI-powered conversations.</p>
-          <p>Here's what you can expect next:</p>
-          <ul>
-            <li>Exclusive updates about our launch</li>
-            <li>Early access to Call4ly before public release</li>
-            <li>Special pricing for early adopters</li>
-          </ul>
-          <p>- The Call4ly Team</p>
-        </div>
-      `,
+                <div style="font-family: sans-serif; padding: 20px;">
+                    <h2>Welcome to Call4ly</h2>
+                    <p>Hi ${name},</p>
+                    <p>Thank you for signing up to learn more about Call4ly.</p>
+                    <p>Your registration has been received and we will notify you as soon as the product is ready.</p>
+                    <p>Best regards,
+                    <br/>
+                    The Call4ly Team</p>
+                </div>
+            `,
         });
 
         return NextResponse.json({ success: true, data });
