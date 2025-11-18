@@ -20,8 +20,8 @@ export default function WaitlistPage(){
         // Insert into Supabase
         const { error } = await supabase.from("waitlist").insert([form]);
         if (error) {
-            console.error("❌ Supabase error:", error);
-            alert("Something went wrong. Please try again later.");
+            console.error("❌ Databasefejl:", error);
+            alert("Der skete en fejl. Prøv igen senere.");
             setLoading(false);
             return;
         }
@@ -35,7 +35,7 @@ export default function WaitlistPage(){
 
         const emailData = await emailRes.json();
         if (!emailData.success) {
-            console.error("❌ Email sending error:", emailData.error);
+            console.error("❌ Emailfejl:", emailData.error);
         }
 
         setSubmitted(true);
@@ -54,26 +54,26 @@ export default function WaitlistPage(){
                     </div>
 
                     <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                        You're on the list!
+                        Du er på listen!
                     </h1>
                     <p className="text-gray-600 text-lg mb-8 max-w-md mx-auto">
-                        Thank you for joining the Call4ly waitlist. We'll notify you as soon as we launch.
+                        Tak fordi du tilmeldte dig Call4ly's venteliste. Vi kontakter dig, så snart vi lancerer.
                     </p>
 
                     <div className="bg-white border-2 border-gray-200 rounded-2xl p-6 mb-8 shadow-lg">
-                        <h3 className="text-gray-900 font-semibold mb-3">What happens next?</h3>
+                        <h3 className="text-gray-900 font-semibold mb-3">Hvad sker der nu?</h3>
                         <ul className="text-gray-600 text-left space-y-2">
                             <li className="flex items-start gap-2">
                                 <span className="text-blue-600 mt-1">•</span>
-                                <span>We'll send you exclusive updates about our launch</span>
+                                <span>Vi sender dig eksklusive opdateringer om vores lancering</span>
                             </li>
                             <li className="flex items-start gap-2">
                                 <span className="text-blue-600 mt-1">•</span>
-                                <span>Early access to Call4ly before public release</span>
+                                <span>Tidlig adgang til Call4ly før offentlig lancering</span>
                             </li>
                             <li className="flex items-start gap-2">
                                 <span className="text-blue-600 mt-1">•</span>
-                                <span>Special pricing for early adopters</span>
+                                <span>Særlig prissætning for tidlige brugere</span>
                             </li>
                         </ul>
                     </div>
@@ -82,7 +82,7 @@ export default function WaitlistPage(){
                         href="/"
                         className="inline-block border-2 border-gray-300 hover:border-blue-600 text-gray-700 hover:text-blue-600 font-semibold py-3 px-8 rounded-xl transition-all hover:shadow-lg"
                     >
-                        Back to Home
+                        Tilbage til forside
                     </Link>
                 </div>
             </main>
@@ -98,7 +98,7 @@ export default function WaitlistPage(){
                         <svg className="w-5 h-5 transform group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
                         </svg>
-                        <span className="font-medium">Back to home</span>
+                        <span className="font-medium">Tilbage til forside</span>
                     </Link>
                 </div>
 
