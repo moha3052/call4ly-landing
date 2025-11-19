@@ -16,6 +16,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
     title: "Call4ly – AI receptionist & kundeopkald til virksomheder\n",
     description: "Call4ly hjælper virksomheder med at håndtere kundeopkald automatisk med AI. Spar tid, øg effektiviteten og forbedr kundeservice – helt uden ekstra personale.\n",
+    icons: {
+        icon: "/favicon.ico",
+    },
 };
 
 export default function RootLayout({
