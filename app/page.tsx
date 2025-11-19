@@ -16,20 +16,20 @@ export default function HomePage(){
 
                 <div className="max-w-5xl mx-auto">
                     <div className="inline-block mb-6 px-4 py-2 bg-gradient-to-r from-blue-50 to-cyan-50 border border-blue-200 rounded-full animate-fade-in">
-                        <span className="text-blue-600 text-sm font-medium">🚀 AI-Powered Voice Agent</span>
+                        <span className="text-blue-600 text-sm font-medium">🚀 AI-Drevet Stemme Agent</span>
                     </div>
 
                     <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight animate-slide-up">
-                        Never Miss a Call.
+                        Din AI-receptionist — 24/7.
                         <br />
                         <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
-                            Never Lose a Customer.
+                            Aldrig flere tabte opkald.
                         </span>
                     </h1>
 
                     <p className="text-gray-600 text-lg md:text-xl max-w-3xl mx-auto mb-10 leading-relaxed animate-slide-up delay-100">
-                        Call4ly is your AI-powered receptionist that handles customer calls, books appointments,
-                        and answers questions 24/7 — so you can focus on growing your business.
+                        Call4ly er din AI-drevne receptionist, der håndterer kundeopkald, booker aftaler
+                        og besvarer spørgsmål 24/7 — så du kan fokusere på at vokse din forretning.
                     </p>
 
                     <div className="flex justify-center items-center mb-16 animate-slide-up delay-200">
@@ -37,7 +37,7 @@ export default function HomePage(){
                             href="/waitlist"
                             className="group bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-semibold py-4 px-8 rounded-xl shadow-lg shadow-blue-500/20 transition-all transform hover:scale-105 hover:shadow-xl hover:shadow-blue-500/30"
                         >
-                            Join Waitlist
+                            Kom på venteliste
                             <span className="inline-block ml-2 transform group-hover:translate-x-1 transition-transform">→</span>
                         </Link>
                     </div>
@@ -48,10 +48,10 @@ export default function HomePage(){
             <section className="py-20 px-8 bg-gradient-to-b from-gray-50 to-white">
                 <div className="max-w-6xl mx-auto">
                     <h2 className="text-3xl md:text-5xl font-bold text-gray-900 text-center mb-4 animate-fade-in">
-                        Why Businesses Choose Call4ly
+                        Hvorfor virksomheder vælger Call4ly
                     </h2>
                     <p className="text-gray-600 text-center mb-16 max-w-2xl mx-auto animate-fade-in delay-100">
-                        Powerful features designed to help your business thrive
+                        Kraftfulde funktioner designet til at hjælpe din virksomhed med at blomstre
                     </p>
 
                     <div className="grid md:grid-cols-3 gap-8">
@@ -59,9 +59,9 @@ export default function HomePage(){
                             <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-4 transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-150">
                                 <span className="text-2xl">📞</span>
                             </div>
-                            <h3 className="text-xl font-bold text-gray-900 mb-3">Always Available</h3>
+                            <h3 className="text-xl font-bold text-gray-900 mb-3">Altid tilgængelig</h3>
                             <p className="text-gray-600">
-                                Never miss a customer call again. Our AI agent answers 24/7, even when you can't.
+                                Gå aldrig glip af et kundeopkald igen. Vores AI-agent svarer 24/7, selv når du ikke kan.
                             </p>
                         </div>
 
@@ -69,9 +69,9 @@ export default function HomePage(){
                             <div className="w-14 h-14 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-4 transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-150">
                                 <span className="text-2xl">📅</span>
                             </div>
-                            <h3 className="text-xl font-bold text-gray-900 mb-3">Smart Booking</h3>
+                            <h3 className="text-xl font-bold text-gray-900 mb-3">Smart booking</h3>
                             <p className="text-gray-600">
-                                Automatically schedule appointments and sync with your calendar in real-time.
+                                Book automatisk aftaler og synkroniser med din kalender i realtid.
                             </p>
                         </div>
 
@@ -79,9 +79,9 @@ export default function HomePage(){
                             <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-4 transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-150">
                                 <span className="text-2xl">🤖</span>
                             </div>
-                            <h3 className="text-xl font-bold text-gray-900 mb-3">Natural Conversations</h3>
+                            <h3 className="text-xl font-bold text-gray-900 mb-3">Naturlig og professionel stemme</h3>
                             <p className="text-gray-600">
-                                Powered by advanced AI, Call4ly speaks naturally and understands your customers.
+                                AI’en taler roligt, venligt og professionelt — og giver en menneskelig oplevelse.
                             </p>
                         </div>
 
@@ -89,9 +89,9 @@ export default function HomePage(){
                             <div className="w-14 h-14 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mb-4 transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-150">
                                 <span className="text-2xl">⚡</span>
                             </div>
-                            <h3 className="text-xl font-bold text-gray-900 mb-3">Instant Setup</h3>
+                            <h3 className="text-xl font-bold text-gray-900 mb-3">Opsætning på få minutter</h3>
                             <p className="text-gray-600">
-                                Get started in minutes. Simply connect your phone number and customize your agent.
+                                Forbind dit nummer, vælg dine indstillinger — og du er klar.
                             </p>
                         </div>
 
@@ -99,9 +99,9 @@ export default function HomePage(){
                             <div className="w-14 h-14 bg-gradient-to-br from-orange-500 to-yellow-500 rounded-xl flex items-center justify-center mb-4 transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-150">
                                 <span className="text-2xl">💼</span>
                             </div>
-                            <h3 className="text-xl font-bold text-gray-900 mb-3">Professional Voice</h3>
+                            <h3 className="text-xl font-bold text-gray-900 mb-3">Professionel stemme</h3>
                             <p className="text-gray-600">
-                                A polished, professional voice that represents your brand perfectly, every time.
+                                En poleret, professionel stemme der repræsenterer dit brand perfekt, hver gang.
                             </p>
                         </div>
 
@@ -109,9 +109,9 @@ export default function HomePage(){
                             <div className="w-14 h-14 bg-gradient-to-br from-pink-500 to-red-500 rounded-xl flex items-center justify-center mb-4 transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-150">
                                 <span className="text-2xl">💰</span>
                             </div>
-                            <h3 className="text-xl font-bold text-gray-900 mb-3">Cost Effective</h3>
+                            <h3 className="text-xl font-bold text-gray-900 mb-3">Omkostningseffektiv</h3>
                             <p className="text-gray-600">
-                                Get a full-time receptionist for a fraction of the cost of hiring.
+                                Få en fuldtids receptionist for en brøkdel af omkostningerne ved ansættelse.
                             </p>
                         </div>
                     </div>
@@ -123,10 +123,10 @@ export default function HomePage(){
                 <div className="max-w-4xl mx-auto">
                     <div className="bg-gradient-to-br from-blue-50 via-cyan-50 to-purple-50 border-2 border-gray-200 rounded-3xl p-10 md:p-12 shadow-xl">
                         <h2 className="text-3xl md:text-5xl font-bold text-gray-900 text-center mb-4">
-                            How It Works
+                            Sådan virker det
                         </h2>
                         <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-                            Get started in 4 simple steps
+                            Kom i gang på 4 simple trin
                         </p>
 
                         <div className="space-y-6">
@@ -135,8 +135,8 @@ export default function HomePage(){
                                     1
                                 </div>
                                 <div>
-                                    <h3 className="text-xl font-bold text-gray-900 mb-2">Sign Up for Early Access</h3>
-                                    <p className="text-gray-600">Join the waitlist and be among the first to experience Call4ly.</p>
+                                    <h3 className="text-xl font-bold text-gray-900 mb-2">Tilmeld dig tidlig adgang</h3>
+                                    <p className="text-gray-600">Kom på ventelisten og vær blandt de første til at opleve Call4ly.</p>
                                 </div>
                             </div>
 
@@ -145,8 +145,8 @@ export default function HomePage(){
                                     2
                                 </div>
                                 <div>
-                                    <h3 className="text-xl font-bold text-gray-900 mb-2">Customize Your AI Agent</h3>
-                                    <p className="text-gray-600">Set up business hours, services, and personalize responses to match your brand.</p>
+                                    <h3 className="text-xl font-bold text-gray-900 mb-2">Tilpas din AI-agent</h3>
+                                    <p className="text-gray-600">Indstil åbningstider, tjenester og personaliser svar til at matche dit brand.</p>
                                 </div>
                             </div>
 
@@ -155,8 +155,8 @@ export default function HomePage(){
                                     3
                                 </div>
                                 <div>
-                                    <h3 className="text-xl font-bold text-gray-900 mb-2">Connect Your Phone Number</h3>
-                                    <p className="text-gray-600">Link your existing business number or get a new one from us.</p>
+                                    <h3 className="text-xl font-bold text-gray-900 mb-2">Tilslut dit telefonnummer</h3>
+                                    <p className="text-gray-600">Forbind dit eksisterende virksomhedsnummer eller få et nyt fra os.</p>
                                 </div>
                             </div>
 
@@ -165,8 +165,8 @@ export default function HomePage(){
                                     4
                                 </div>
                                 <div>
-                                    <h3 className="text-xl font-bold text-gray-900 mb-2">Let AI Handle the Rest</h3>
-                                    <p className="text-gray-600">Your AI receptionist answers calls, books appointments, and keeps you informed.</p>
+                                    <h3 className="text-xl font-bold text-gray-900 mb-2">AI’en tager telefonen</h3>
+                                    <p className="text-gray-600">Din AI-receptionist besvarer opkald, booker aftaler og holder dig informeret.</p>
                                 </div>
                             </div>
                         </div>
@@ -183,7 +183,7 @@ export default function HomePage(){
                                 Call4ly
                             </h3>
                             <p className="text-gray-600 text-sm">
-                                © 2025 Call4ly. All rights reserved.
+                                © 2025 Call4ly. Alle rettigheder forbeholdes.
                             </p>
                         </div>
                         <div className="flex gap-6">
