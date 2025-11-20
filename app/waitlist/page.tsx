@@ -17,30 +17,41 @@ export default function WaitlistPage(){
         e.preventDefault();
         setLoading(true);
 
-        // Insert into Supabase
-        const { error } = await supabase.from("waitlist").insert([form]);
-        if (error) {
-            console.error("❌ Databasefejl:", error);
+        try {
+            // Kør database og email parallelt
+            const [dbRes, emailRes] = await Promise.all([
+                supabase.from("waitlist").insert([form]),
+                fetch("/api/sendWaitlistEmail", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ name: form.name, email: form.email }),
+                }),
+            ]);
+
+            if (dbRes.error) {
+                console.error("Databasefejl:", dbRes.error);
+                alert("Der skete en fejl med databasen.");
+                return;
+            }
+
+            if (!emailRes.ok) {
+                console.error("Email endpoint fejlede.");
+            } else {
+                const emailData = await emailRes.json();
+                if (!emailData.success) {
+                    console.error("Emailfejl:", emailData.error);
+                }
+            }
+
+            setSubmitted(true);
+        } catch (err) {
+            console.error("Uventet fejl:", err);
             alert("Der skete en fejl. Prøv igen senere.");
+        } finally {
             setLoading(false);
-            return;
         }
-
-        // Send email via Resend
-        const emailRes = await fetch("/api/sendWaitlistEmail", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ name: form.name, email: form.email }),
-        });
-
-        const emailData = await emailRes.json();
-        if (!emailData.success) {
-            console.error("❌ Emailfejl:", emailData.error);
-        }
-
-        setSubmitted(true);
-        setLoading(false);
     };
+
 
 
     if (submitted) {
@@ -105,15 +116,15 @@ export default function WaitlistPage(){
                 {/* Header */}
                 <div className="text-center mb-8">
                     <div className="inline-block mb-6 px-4 py-2 bg-gradient-to-r from-blue-100 to-cyan-100 border border-blue-300 rounded-full">
-                        <span className="text-blue-700 text-sm font-medium">Limited Early Access Spots</span>
+                        <span className="text-blue-700 text-sm font-medium">Begrænsede pladser til tidlig adgang</span>
                     </div>
 
                     <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                        Join the Waitlist
+                        Kom på ventelisten
                     </h1>
                     <p className="text-gray-600 text-lg max-w-xl mx-auto">
-                        Be among the first to experience the future of customer service.
-                        Get early access to Call4ly's AI-powered receptionist.
+                        Vær blandt de første til at opleve fremtidens kundeservice.
+                        Få tidlig adgang til Call4lys AI-drevne receptionist.
                     </p>
                 </div>
 
@@ -124,7 +135,7 @@ export default function WaitlistPage(){
                 >
                     <div>
                         <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                            Name *
+                            Navn *
                         </label>
                         <input
                             type="text"
@@ -140,7 +151,7 @@ export default function WaitlistPage(){
 
                     <div>
                         <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                            Email Address *
+                            Email adresse *
                         </label>
                         <input
                             type="email"
@@ -156,11 +167,13 @@ export default function WaitlistPage(){
 
                     <div>
                         <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                            Phone Number *
+                            Telefonnummer *
                         </label>
                         <input
                             type="tel"
                             id="phone"
+                            pattern="[0-9+ ]{6,20}"
+                            inputMode="tel"
                             name="phone"
                             placeholder="+45 55 12 34 56"
                             value={form.phone}
@@ -172,7 +185,7 @@ export default function WaitlistPage(){
 
                     <div>
                         <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
-                            Company Name <span className="text-gray-500">(Optional)</span>
+                            Virksomhedsnavn <span className="text-gray-500">(Valgfrit)</span>
                         </label>
                         <input
                             type="text"
@@ -196,18 +209,18 @@ export default function WaitlistPage(){
                                     <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                                     <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                                 </svg>
-                                Joining...
+                                Tilmelder...
                             </span>
                         ) : (
                             <span>
-                                Join the Waitlist
+                                Kom på ventelisten
                                 <span className="inline-block ml-2 transform group-hover:translate-x-1 transition-transform">→</span>
                             </span>
                         )}
                     </button>
 
                     <p className="text-gray-500 text-sm text-center">
-                        By joining, you agree to receive updates about Call4ly.
+                        Ved tilmelding accepterer du at modtage opdateringer om Call4ly.
                     </p>
                 </form>
             </div>

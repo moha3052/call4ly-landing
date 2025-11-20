@@ -10,16 +10,16 @@ export async function POST(req: Request) {
         const data = await resend.emails.send({
             from: "Call4ly <support@mail.call4ly.com>", // din ønskede adresse
             to: email,
-            subject: "Welcome to Call4ly", // neutral subject (anti-spam)
+            subject: "Velkommen til Call4ly", // neutral subject (anti-spam)
             html: `
                 <div style="font-family: sans-serif; padding: 20px;">
-                    <h2>Welcome to Call4ly</h2>
-                    <p>Hi ${name},</p>
-                    <p>Thank you for signing up to learn more about Call4ly.</p>
-                    <p>Your registration has been received and we will notify you as soon as the product is ready.</p>
-                    <p>Best regards,
+                    <h2>Velkommen til Call4ly</h2>
+                    <p>Hej ${name},</p>
+                    <p>Tak fordi du tilmeldte dig for at lære mere om Call4ly.</p>
+                    <p>Din tilmelding er blevet modtaget, og vi vil kontakte dig, så snart produktet er klar.</p>
+                    <p>Venlig hilsen,
                     <br/>
-                    The Call4ly Team</p>
+                    Call4ly-teamet</p>
                 </div>
             `,
         });
