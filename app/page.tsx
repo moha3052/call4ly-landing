@@ -34,11 +34,10 @@ export default function HomePage(){
 
                     <div className="flex justify-center items-center mb-16 animate-slide-up delay-200">
                         <Link
-                            href="/waitlist"
-                            className="group bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-semibold py-4 px-8 rounded-xl shadow-lg shadow-blue-500/20 transition-all transform hover:scale-105 hover:shadow-xl hover:shadow-blue-500/30"
+                            href="/signup"
+                            className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-semibold py-4 px-8 rounded-xl shadow-lg shadow-blue-500/20 transition-all transform hover:scale-105 hover:shadow-xl hover:shadow-blue-500/30"
                         >
-                            Kom på venteliste
-                            <span className="inline-block ml-2 transform group-hover:translate-x-1 transition-transform">→</span>
+                            Kom i gang
                         </Link>
                     </div>
                 </div>
