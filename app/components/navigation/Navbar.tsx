@@ -12,27 +12,16 @@ export default function Navbar(){
 
                     {/* Logo */}
                     <Link href="/" aria-label="Call4ly Forside" className="flex items-center gap-2 cursor-pointer">
-                        {/* Optional real logo */}
-                        {/*
-            <Image
-              src="/logo.png"
-              alt="Call4ly Logo"
-              width={32}
-              height={32}
-            />
-            */}
                         <h2 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent transition-all duration-300">
                             Call4ly
                         </h2>
                     </Link>
 
-                    {/* CTA */}
                     <Link
-                        href="/waitlist"
-                        className="group bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-semibold py-2.5 px-6 rounded-xl  transition-all transform hover:scale-105"
+                        href="/login"
+                        className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-semibold py-2.5 px-6 rounded-xl transition-all transform hover:scale-105 focus:ring-2 focus:ring-blue-500 focus:outline-none focus:scale-105"
                     >
-                        Kom på venteliste
-                        <span className="inline-block ml-1 transform group-hover:translate-x-1 transition-transform">→</span>
+                        Login
                     </Link>
 
                 </div>
