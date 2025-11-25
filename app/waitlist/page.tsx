@@ -116,7 +116,7 @@ export default function WaitlistPage(){
                 {/* Header */}
                 <div className="text-center mb-8">
                     <div className="inline-block mb-6 px-4 py-2 bg-gradient-to-r from-blue-100 to-cyan-100 border border-blue-300 rounded-full">
-                        <span className="text-blue-700 text-sm font-medium">Begrænsede pladser til tidlig adgang</span>
+                        <span className="text-blue-700 text-sm font-medium">Bliv en af de første brugere</span>
                     </div>
 
                     <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -201,7 +201,7 @@ export default function WaitlistPage(){
                     <button
                         type="submit"
                         disabled={loading}
-                        className="group w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 disabled:from-gray-400 disabled:to-gray-500 text-white font-semibold py-4 rounded-xl shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/40 transition-all transform hover:scale-[1.02] disabled:scale-100 disabled:cursor-not-allowed"
+                        className="cursor-pointer group w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 disabled:from-gray-400 disabled:to-gray-500 text-white font-semibold py-4 rounded-xl shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/40 transition-all transform hover:scale-[1.02] disabled:scale-100 disabled:cursor-not-allowed"
                     >
                         {loading ? (
                             <span className="flex items-center justify-center gap-2">
