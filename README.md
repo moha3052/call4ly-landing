@@ -1,36 +1,30 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Call4ly 📞
 
-## Getting Started
+En AI-drevet voice agent der automatisk besvarer kundeopkald for restauranter og små virksomheder.
 
-First, run the development server:
+## Hvad er det?
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Mange restauranter og SMV'er mister kunder fordi telefonen ringer mens de er optaget.
+Call4ly løser det ved at lade en AI-agent besvare opkald, svare på spørgsmål og tage imod beskeder — automatisk, døgnet rundt.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Vi byggede et fuldt MVP og testede det med rigtige kunder. Vi nåede frem til at markedet ikke var klar endnu — men projektet gav os enormt værdifuld erfaring.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Techstack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Lag | Teknologi |
+|---|---|
+| Voice AI | Vapi |
+| Frontend | Next.js |
 
-## Learn More
+## Hvad jeg lærte
 
-To learn more about Next.js, take a look at the following resources:
+Dette projekt lærte mig mere om AI end noget kursus nogensinde har gjort:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **LLM-evaluering** — vi testede GPT-4o, Claude og Gemini op mod hinanden til voice-use cases og fandt ud af hvornår hver model er stærk
+- **TTS til dansk** — vi evaluerede hvilke text-to-speech systemer der lyder naturlige på dansk (det er sværere end man tror)
+- **MVP-validering** — hvordan man snakker med kunder, hvad man lytter efter, og hvornår man skal pivote
+- **Produktbeslutninger under usikkerhed** — at bygge hurtigt og teste hurtigt er en kompetence i sig selv
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Kontakt
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Mohamed Adan — [moha3052@hotmail.dk](mailto:moha3052@hotmail.dk)
